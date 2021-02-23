@@ -1,3 +1,5 @@
+from moves import Move
+
 class Pokemon():
     def __init__(self, name, types):
         self.name = name
@@ -7,27 +9,32 @@ class Pokemon():
         self.deffense = 0
         self.health = 0
 
-    def setATK(self):
-        pass
+    def setEVs(self, attack, deffense, health):
+        self.attack = attack
+        self.deffense = deffense
+        self.health = health
 
-    def setDEF(self):
-        pass
-
-    def setHP(self):
-        pass
     
-    def setMoves(self):
-        pass
+    def addMove(self, move):
+        self.moves.append(move)
         
 
 
 
 if __name__ == "__main__":
-    charizard = Pokemon("Charizard", ["fire", "flying"])
 
-    print(charizard.name)
-    print(charizard.types)
+    # List of moves
+    flame_thrower = Move("flame thrower", "fire", 90)
+    dragon_breath = Move("dragon breath", "fire", 60)
+    ember         = Move ("ember", "fire", 40)
+    fire_spin     = Move("fire spin", "fire", 35)
+
+    charizard = Pokemon("Charizard", ["fire", "flying"])
+    charizard.addMove( flame_thrower )
+    charizard.addMove( dragon_breath )
+    charizard.addMove( ember )
+    charizard.addMove( fire_spin )
+
+
     print(charizard.moves)
-    print(charizard.attack)
-    print(charizard.deffense)
-    print(charizard.health)
+    
