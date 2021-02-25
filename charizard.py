@@ -3,30 +3,8 @@ from moves import Move
 
 class Charizard(Pokemon):
     def __init__(self, name, types):
-        self.name = name
-        self.types = types
-        self.moves = list()
-        self.attack = 0
-        self.deffense = 0
-        self.health = 0
-    
-    def setEVs(self, attack, deffense, health):
-        self.attack = attack
-        self.deffense = deffense
-        self.health = health
-
-    def addMove(self, move):
-        if len(self.moves) > 4:
-            print("sorry, no more moves")
-        else:    
-           self.moves.append(move)
-        
-    def use(self, move): 
-        if move in self.moves:
-            print(f"{self.name} just use {move.name}, and it did {move.power} damage")
-            return move.power
-        else:
-            print(f"{self.name} doesn't have that move. sorry")    
+        super().__init__(name, types)
+        self.weakness = "water"
 
 
 
