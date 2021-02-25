@@ -98,7 +98,6 @@ class Venusaur(Pokemon):
                 if opponent.weakness == your_move.type:
                     opponent._deffense /= 2
                 
-                
 
                 self.take_damage( opponent.use( enemy_move ) )
                 opponent.take_damage( self.use ( your_move ) ) 
@@ -129,14 +128,14 @@ if __name__ == "__main__":
     double_edge   = Move("double edge", "normal", 120)
 
     # creating pokemon
-    venusaur = Venusaur("Venusaur", ["fire", "flying"])
+    venusaur = Venusaur("Venusaur", "grass")
     venusaur.setEVs(80, 80, 100)
     venusaur.addMove( vine_whip )
     venusaur.addMove( petal_dance )
     # venusaur.use( vine_whip )
 
 
-    venusaur2 = Venusaur("grassPoke", ["fire", "flying"])
+    venusaur2 = Venusaur("grassPoke", "grass")
     venusaur2.setEVs(200,80,90)
     venusaur2.addMove( vine_whip )
 
