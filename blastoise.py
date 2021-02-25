@@ -116,6 +116,9 @@ class Blastoise(Pokemon):
                     print(f"\nDouble KO")
                     return f"Double KO"
 
+    def hobby(self):
+        print(f"{self._name} likes to nap inside of his shell.")
+
 if __name__ == "__main__":
 
     # List of moves

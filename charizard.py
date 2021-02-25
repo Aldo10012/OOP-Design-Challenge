@@ -116,6 +116,9 @@ class Charizard(Pokemon):
                     print(f"\nDouble KO")
                     return f"Double KO"
 
+    def hobby(self):
+        print(f"{self._name} likes to fly high above the clouds.")
+
 if __name__ == "__main__":
 
     # List of moves

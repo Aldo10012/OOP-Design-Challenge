@@ -50,6 +50,9 @@ class Pokemon(ABC):
         else:
             return False
 
+    def hobby(self):
+        print(f"{self._name} likes to eat Poke-Puffs")
+
 
 if __name__ == "__main__":
     # List of moves
@@ -63,3 +66,4 @@ if __name__ == "__main__":
     venusaur.addMove( vine_whip )
     venusaur.addMove( petal_dance )
     venusaur.use( double_edge )
+    venusaur.hobby()

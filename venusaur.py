@@ -116,7 +116,8 @@ class Venusaur(Pokemon):
                     print(f"\nDouble KO")
                     return f"Double KO"
 
-
+    def hobby(self):
+        print(f"{self._name} likes to grow trees.")
 
 
 if __name__ == "__main__":
@@ -139,4 +140,5 @@ if __name__ == "__main__":
     venusaur2.setEVs(200,80,90)
     venusaur2.addMove( vine_whip )
 
+    venusaur.hobby()
     venusaur.fight(venusaur2)
