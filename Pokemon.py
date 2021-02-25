@@ -34,7 +34,7 @@ class Pokemon(ABC):
         
     def use(self, move): 
         if move in self._moves:
-            print(f"{self._name} just use {move.name}, and it did {move.power} damage")
+            # print(f"{self._name} just use {move.name}, and it did {move.power} damage")
             return move.power
         else:
             print(f"{self._name} doesn't have that move. sorry")    
