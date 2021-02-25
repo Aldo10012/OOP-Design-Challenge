@@ -44,6 +44,12 @@ class Pokemon(ABC):
         if damage_taken > 0:
             self._health -= damage_taken
 
+    def is_alive(self):
+        if self._health > 0:
+            return True
+        else:
+            return False
+
 
 if __name__ == "__main__":
     # List of moves

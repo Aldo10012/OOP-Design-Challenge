@@ -5,6 +5,14 @@ class Venusaur(Pokemon):
     def __init__(self, name, types):
         super().__init__(name, types)
         self.weakness = "fire"
+        self.advantage = "water"
+
+    def stengths_and_weaknesses(self):
+        print(f"{self._name} is strong against {self.advantage} and weak against {self.weakness}")
+
+
+
+        
         
 
 
