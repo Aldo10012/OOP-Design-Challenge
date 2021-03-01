@@ -24,7 +24,6 @@ if __name__ == "__main__":
     # creating pokemon
     blastoise = Blastoise("Blastoise")
     blastoise.setEVs(100,25,200)
-    blastoise.get_weaknesses()
     blastoise.addMove( flash_cannon )
     blastoise.addMove( hydro_pump )
 
