@@ -6,7 +6,7 @@ class Pokemon():
         # attributes are protected
         self._name = name
         self._types = types
-        self.weakness = weakness
+        self._weakness = weakness
         self._moves = list()
         self._attack = 0
         self._deffense = 0
@@ -16,6 +16,12 @@ class Pokemon():
         self._attack = attack
         self._deffense = deffense
         self._health = health
+
+    def getEVs(self):
+        print(f"attack damage: {self._attack}\ndeffence:      {self._deffense}\nhealth:        {self._health}")
+
+    def get_weaknesses(self):
+        print(f"{self._name} is weak against {self._weakness}")
 
     def addMove(self, move):
         if len(self._moves) > 4:
@@ -124,9 +130,9 @@ class Pokemon():
                 ################################
 
                 # reduce deffence if weak to attack
-                if self.weakness == enemy_move.type:
+                if self._weakness == enemy_move.type:
                     self._deffense /= 2
-                if opponent.weakness == your_move.type:
+                if opponent._weakness == your_move.type:
                     opponent._deffense /= 2
                 
 
@@ -152,15 +158,45 @@ class Pokemon():
 
 
 if __name__ == "__main__":
-    # List of moves
-    petal_dance = Move("petal dance", "grass", 120)
-    vine_whip   = Move("vine whip", "grass", 45)
+    #####################
+    #   LIST OF MOVES   #
+    #####################
+
+    # moves for Venusaur
+    petal_dance   = Move("petal dance", "grass", 120)
+    vine_whip     = Move("vine whip", "grass", 45)
     razor_leaf    = Move ("razor leaf", "grass", 55)
     double_edge   = Move("double edge", "normal", 120)
 
-    # creating pokemon
+    # mvoes for charizard
+    flame_thrower = Move("flame thrower", "fire", 90)
+    dragon_breath = Move("dragon breath", "dragon", 60)
+    ember         = Move ("ember", "fire", 40)
+    fire_spin     = Move("fire spin", "fire", 35)    
+
+    # moves for balstoise
+    flash_cannon  = Move("flash cannon", "steel", 80)
+    rapid_spin    = Move("rapid spin", "normal", 50)
+    aqua_tail     = Move ("aqua tail", "water", 90)
+    hydro_pump    = Move("hydro pump", "water", 110)
+
+
+    ########################
+    #   CREATING POKEMON   #
+    ########################
+
+    # create venasur
     venusaur = Pokemon("Venusaur", "grass", "fire")
+    venusaur.setEVs(82, 83, 100)
+    venusaur.get_weaknesses()
+    venusaur.getEVs()
     venusaur.addMove( vine_whip )
     venusaur.addMove( petal_dance )
-    venusaur.use( double_edge )
-    venusaur.hobby()
+
+    # create charizard
+    charizard = Pokemon("Charizard", "fire", "water")
+    charizard.setEVs(100, 78, 78)
+
+    # create blastoise
+    blastoise = Pokemon("Blastoise", "water", "grass")
+    blastoise.setEVs(83, 100, 79)

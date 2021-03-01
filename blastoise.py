@@ -2,12 +2,12 @@ from pokemon import Pokemon
 from moves import Move
 
 class Blastoise(Pokemon):
-    def __init__(self, name, types, weakness):
+    def __init__(self, name, types="water", weakness="grass"):
         super().__init__(name, types, weakness)
-        self.advantage = "water"
+        self.advantage = "fire"
 
-    def stengths_and_weaknesses(self):
-        print(f"{self._name} is strong against {self.advantage} and weak against {self.weakness}")
+    def get_weaknesses(self):
+        print(f"{self._name} is strong against {self.advantage} and weak against {self._weakness}")
 
     
     def hobby(self):
@@ -22,16 +22,17 @@ if __name__ == "__main__":
     hydro_pump   = Move("hydro pump", "water", 110)
 
     # creating pokemon
-    blastoise = Blastoise("Blastoise", "water", "grass")
+    blastoise = Blastoise("Blastoise")
     blastoise.setEVs(100,25,200)
+    blastoise.get_weaknesses()
     blastoise.addMove( flash_cannon )
     blastoise.addMove( hydro_pump )
 
-    shell_shucker = Blastoise("Shell Shucker", "water", "grass")
+    shell_shucker = Blastoise("Shell Shucker")
     shell_shucker.setEVs(100,25,200)
     shell_shucker.addMove( flash_cannon )
     shell_shucker.addMove( hydro_pump )
     shell_shucker.addMove( aqua_tail )
     # print(charizard.moves)
 
-    blastoise.fight(shell_shucker)
+    # blastoise.fight(shell_shucker)

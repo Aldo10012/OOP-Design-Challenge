@@ -2,12 +2,12 @@ from pokemon import Pokemon
 from moves import Move
 
 class Charizard(Pokemon):
-    def __init__(self, name, types, weakness):
+    def __init__(self, name, types="fire", weakness="water"):
         super().__init__(name, types, weakness)
-        self.advantage = "water"
+        self.advantage = "grass"
 
-    def stengths_and_weaknesses(self):
-        print(f"{self._name} is strong against {self.advantage} and weak against {self.weakness}")
+    def get_weaknesses(self):
+        print(f"{self._name} is strong against {self.advantage} and weak against {self._weakness}")
 
 
     def hobby(self):
@@ -22,13 +22,13 @@ if __name__ == "__main__":
     fire_spin     = Move("fire spin", "fire", 35)
 
     # creating pokemon
-    charizard = Charizard("Charizard", "fire", "water")
+    charizard = Charizard("Charizard")
     charizard.setEVs(100,40,20)
     charizard.addMove( flame_thrower )
     charizard.addMove( ember )
     # charizard.use( fire_spin )
 
-    lilChar = Charizard("lil Char", "fire", "water")
+    lilChar = Charizard("lil Char")
     lilChar.setEVs(100,50,180)
     lilChar.addMove( flame_thrower )
     lilChar.addMove( dragon_breath )

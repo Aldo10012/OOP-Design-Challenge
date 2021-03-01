@@ -16,9 +16,9 @@ Attributes:
     Rationale about which attributes are private, protected, or public should be provided in code comments or verbally during presentation.
 
 Diagram:
-    A diagram is provided that shows an overview of all the classes that make up the system design
-    Diagram shows relationships between classes.
-    You can achieve this by creating UML Class Diagrams. Here is a template on how to make them, here.
+        A diagram is provided that shows an overview of all the classes that make up the system design
+        Diagram shows relationships between classes.
+        You can achieve this by creating UML Class Diagrams. Here is a template on how to make them, here.
 
 Presentation:
     5 - 10 min in-class presentation is given showing off all of the above requirements.
