@@ -188,15 +188,29 @@ if __name__ == "__main__":
     # create venasur
     venusaur = Pokemon("Venusaur", "grass", "fire")
     venusaur.setEVs(82, 83, 100)
-    venusaur.get_weaknesses()
-    venusaur.getEVs()
-    venusaur.addMove( vine_whip )
     venusaur.addMove( petal_dance )
+    venusaur.addMove( vine_whip )
+    venusaur.addMove( razor_leaf )
+    venusaur.addMove( double_edge )
 
     # create charizard
     charizard = Pokemon("Charizard", "fire", "water")
     charizard.setEVs(100, 78, 78)
+    charizard.addMove( flame_thrower )
+    charizard.addMove( dragon_breath )
+    charizard.addMove( ember )
+    charizard.addMove( fire_spin )
 
     # create blastoise
     blastoise = Pokemon("Blastoise", "water", "grass")
     blastoise.setEVs(83, 100, 79)
+    blastoise.addMove( flash_cannon )
+    blastoise.addMove( rapid_spin )
+    blastoise.addMove( aqua_tail )
+    blastoise.addMove( hydro_pump )
+
+
+    ######################
+    #   POKEMON BATTLE   #
+    ######################
+    charizard.fight(venusaur)
